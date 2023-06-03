@@ -132,8 +132,8 @@ img {
 }
 
 .card > .social > a {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,6 +203,7 @@ img {
     box-shadow: inset 0 0 0 10em #753a88;
 }
 
+
 @media(min-width:360px) {
 
     .container {
@@ -267,13 +268,13 @@ img {
     }
     .card > .social {
         position: absolute;
-        top: 35px;
+        top: 20px;
         left: 20px;
     }
 
     .card > .social > a {
-        width: 30px;
-        height: 30px;
+        width:34px;
+        height: 35px;
         margin: 5px 0;
         padding: 5px;
     }
@@ -290,6 +291,19 @@ img {
     .social-btn__group > .social-btn > .bx {
         font-size: 24px;
         margin: 5px;
+    }
+
+    .card > .btn-group > .btn {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 24px;
+        margin: 5px;
+        border-radius: 8px;
+        color: #fff;
+        background: linear-gradient(-45deg,#753a88, #cc2b5e);
+        box-shadow: 5px 5px 10px rgba(235, 228, 228, 0.2);
+        transition: all 0.3s;
+    
     }
 }
 @media(min-width:378px) {
@@ -380,6 +394,19 @@ img {
         font-size: 24px;
         margin: 5px;
     }
+    
+.card > .btn-group > .btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(-45deg,#753a88, #cc2b5e);
+    box-shadow: 5px 5px 10px rgba(235, 228, 228, 0.2);
+    transition: all 0.3s;
+
+}
 }
 @media(min-width:568px) {
 
