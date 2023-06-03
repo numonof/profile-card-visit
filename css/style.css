@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url( 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     position: relative;
     background: #161616;
 }
-.container{
+.container {
     position: relative;
     max-width: 1440px;
     width: 100%;
@@ -32,13 +32,12 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
     width: 390px;
-    height: 550px;
+    height: 100%;
     padding: 20px 40px;
     text-align: center;
     background: rgba(35, 25, 35, 0.6);
-    backdrop-filter: blur(2px);
     box-shadow: 20px 20px 50px rgba(0, 0,0, 0.1);
     border-top: 1px solid rgb(255, 255, 255, 0.4);
     border-left: 1px solid rgb(255, 255, 255, 0.4);
@@ -73,53 +72,56 @@ img {
     box-shadow: 5px 5px 10px rgba(0, 0,0, 0.2);
 }
 
-.card>h1{
-    font-size:25px;
+.card > h1 {
+    font-size: 25px;
     line-height: 30px;
     margin-top: 10px;
     letter-spacing: 1.5px;
 }
 
-.card>span{
+.card > span {
+    font-family: 'Poppins',sans-serif;
     font-size: 18px;
     line-height: 25px;
     margin: 10px 0;
     color: #6dd5ed;
 }
-.card>.line{
+.card > .line {
     width: 80%;
     height: 2px;
     background-color: #fff;
     border-radius: 4px;
 }
-.card>.text{
+.card > .text {
     font-weight: 300;
     font-size: 16px;
     text-align: justify;
     margin: 17px 0;
 }
-.card>.btn-group{
+.card > .btn-group {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow: row wrap;
 }
-.card>.btn-group>.btn{
+.card > .btn-group > .btn {
     font-size: 16px;
     font-weight: 600;
     padding: 12px 24px;
+    margin: 5px;
     border-radius: 8px;
     color: #fff;
     background: linear-gradient(-45deg,#753a88, #cc2b5e);
     box-shadow: 5px 5px 10px rgba(235, 228, 228, 0.2);
     transition: all 0.3s;
-    
+
 }
-.card>.btn-group>.btn:hover{
+.card > .btn-group > .btn:hover {
     background: linear-gradient(-45deg,#2193b0, #6dd5ed);
 }
-.card>.social{
+.card > .social {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -127,20 +129,670 @@ img {
     flex-direction: column;
 }
 
-.card>.social>a{
+.card > .social > a {
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#2193b0;
+    background-color: #2193b0;
     margin: 5px 0;
     padding: 5px;
     color: #fff;
     border-radius: 10%;
     transition: all 0.3s;
 }
-.card>.social>a:hover{
-    background-color:#fff;
+.card > .social > a:hover {
+    background-color: #fff;
     color: #2193b0;
+}
+.social-btn__group {
+    margin-top: 15px;
+}
+.social-btn__group > .social-btn {
+    position: relative;
+
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    padding: 8px 32px;
+    margin: 10px;
+    border: 1px solid #2193b0;
+    border-radius: 25px;
+    background: transparent;
+    transition: color 0.3s 0.1s ease-out;
+}
+
+.social-btn__group > .social-btn > .bx {
+    font-size: 24px;
+    margin: 5px;
+}
+
+.social-btn__group > .social-btn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+.social-btn__group > .social-btn:hover {
+    color: #fff;
+    border: 1px solid #2193b0;
+    box-shadow: 5px 5px 10px rgba(235, 228, 228, 0.2);
+}
+.social-btn__group > .social-btn:hover::before {
+    box-shadow: inset 0 0 0 10em #753a88;
+}
+
+@media(min-width:378px) {
+
+    .container {
+        position: relative;
+        max-width: 378px;
+        width: 100%;
+        min-height: 100vh;
+        padding: 0 20px;
+    }
+    .card {
+        width: 370px;
+        height: 100%;
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left:-15%;
+        width: 250px;
+        height: 250px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 60%;
+        width: 300px;
+        height: 300px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 14px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 35px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+@media(min-width:568px) {
+
+    .container {
+        position: relative;
+        max-width: 568px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .circle1 {
+        position: absolute;
+        top: 60%;
+        left: 0%;
+        width: 250px;
+        height: 250px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 55%;
+        width: 300px;
+        height: 300px;
+        z-index: -10;
+    }
+    .card {
+        width: 390px;
+        height: 100%;
+    }
+}
+
+@media(min-width:768px) {
+
+    .container {
+        position: relative;
+        max-width: 768px;
+        width: 100%;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 390px;
+        height: 100%;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(255, 255, 255, 0.4);
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        z-index: 10;
+        transform: translate(5%, 10%);
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left: 15%;
+        width: 250px;
+        height: 250px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 55%;
+        width: 300px;
+        height: 300px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+@media(min-width:992px) {
+
+    .container {
+        position: relative;
+        max-width: 992px;
+        width: 100%;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 390px;
+        height: 100%;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(255, 255, 255, 0.4);
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        z-index: 10;
+        transform: translate(5%, 10%);
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        width: 300px;
+        height: 300px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 45%;
+        width: 400px;
+        height: 400px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+@media(min-width:1024px) {
+
+    .container {
+        position: relative;
+        max-width: 1024px;
+        width: 100%;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 390px;
+        height: 100%;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(255, 255, 255, 0.4);
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        z-index: 10;
+        transform: translate(5%, 10%);
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        width: 300px;
+        height: 300px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 45%;
+        width: 400px;
+        height: 400px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+
+@media(min-width:1240px) {
+
+    .container {
+        position: relative;
+        max-width: 1240px;
+        width: 100%;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 390px;
+        height: 100%;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(255, 255, 255, 0.4);
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        z-index: 10;
+        transform: translate(10%, 15%);
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        width: 300px;
+        height: 300px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 45%;
+        width: 400px;
+        height: 400px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+
+
+
+@media(min-width:1440px) {
+
+    .container {
+        position: relative;
+        max-width: 1440px;
+        width: 100%;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 390px;
+        height: 100%;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(255, 255, 255, 0.4);
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        z-index: 10;
+        transform: translate(5%, 10%);
+    }
+    .circle1 {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        width: 300px;
+        height: 300px;
+    }
+    .circle2 {
+        position: absolute;
+        top: -15%;
+        left: 45%;
+        width: 400px;
+        height: 400px;
+        z-index: -10;
+    }
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .card > span {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+    .card > .line {
+        width: 80%;
+        height: 2px;
+    }
+    .card > .text {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 17px 0;
+    }
+    .card > .btn-group > .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        margin: 5px;
+        transition: all 0.3s;
+    }
+    .card > .social {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .card > .social > a {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .social-btn__group {
+        margin-top: 15px;
+    }
+    .social-btn__group > .social-btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 32px;
+        margin: 10px;
+    }
+
+    .social-btn__group > .social-btn > .bx {
+        font-size: 24px;
+        margin: 5px;
+    }
 }
