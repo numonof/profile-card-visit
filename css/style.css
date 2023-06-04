@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     color: #fff;
-    overflow-x: hidden;
+    overflow-x:inherit;
     padding: 0 20px;
 }
 a {
@@ -414,7 +414,7 @@ img {
         position: relative;
         max-width: 568px;
         width: 100%;
-        overflow-x: hidden;
+        overflow-x: inherit;
     }
     .circle1 {
         position: absolute;
@@ -443,6 +443,7 @@ img {
         position: relative;
         max-width: 768px;
         width: 100%;
+        overflow-x: auto;
     }
     .card {
         position: relative;
@@ -538,6 +539,7 @@ img {
         position: relative;
         max-width: 992px;
         width: 100%;
+        overflow-x: auto;
     }
     .card {
         position: relative;
@@ -633,7 +635,8 @@ img {
         position: relative;
         max-width: 1024px;
         width: 100%;
-    }
+        overflow-x: auto;
+        }
     .card {
         position: relative;
         display: flex;
@@ -729,6 +732,7 @@ img {
         position: relative;
         max-width: 1240px;
         width: 100%;
+        overflow-x:inherit;
     }
     .card {
         position: relative;
@@ -827,6 +831,8 @@ img {
         position: relative;
         max-width: 1440px;
         width: 100%;
+        overflow-x:visible;
+
     }
     .card {
         position: relative;
